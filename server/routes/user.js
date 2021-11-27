@@ -30,7 +30,7 @@ database
                 id: user[0].id,
                 name: user[0].name
         };
-        jwt.sign(payload, "secret", { expiresIn: "12h" }, (err, token) => {
+        jwt.sign(pwData, "secret", { expiresIn: "12h" }, (err, token) => {
             if (err) console.error("There is some error in token", err);
             else {
                 res.json({
