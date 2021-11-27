@@ -8,5 +8,15 @@ router.get("/", (req, res) => {
         .then(data => res.status(200).json(data))
         .catch(err => res.status(500).send({ error: err }));
 });
-
+// post route that will create a timestamp and insert it into the orders table. error handling also. 
 router.post("/", (req, res) => {
+    const timestamp = new data().getTime()
+
+    database 
+        .query(
+            "INSERT INTO orders(is_open, total_price, created_at) VALUES (?,?,?)"
+        [1, 0.0, timestamp]
+        )
+        .then(data => res.status(201).json(data.insertId))
+        .catch(err => res.status(500).send({ error: err }));
+});
