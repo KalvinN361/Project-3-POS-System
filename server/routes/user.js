@@ -1,5 +1,4 @@
 // user routes
-
 const express = require("express");
 const database = require("../config/database");
 const router = express.Router();
@@ -7,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
 const validateLoginInput = require("../validation/login");
+
 // login post
 router.post("/login", (req, res) => {
     const { errors, isValid } = validateLoginInput(req.body);
@@ -26,7 +26,7 @@ database
     }
     bcrypt.compare(password, user[0].password).then(same => {
         if (same) {
-            const payload = {
+            const pwData = {
                 id: user[0].id,
                 name: user[0].name
         };
