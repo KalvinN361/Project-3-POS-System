@@ -1,17 +1,17 @@
 const validator = require("validator");
-const isEmpty = require("./isEmpty");
+const invalidResponse = require("./invalidResponse");
 
 module.exports = validateLoginInput = data => {
     let errors = {};
 // turns the username and password into a string 
-    data.username = !isEmpty(data.username) ? data.username : "";
-    data.password = !isEmpty(data.password) ? data.password : "";
+    data.username = !invalidResponse(data.username) ? data.username : "";
+    data.password = !invalidResponse(data.password) ? data.password : "";
 
     if (!validator.isAlphanumeric(data.username)) {
     errors.username = "Username may only contain letters and numbers!";
     }
 
-    if (validator.isEmpty(data.username)) {
+    if (validator.invalidResponse(data.username)) {
     errors.username = "Please enter a Username!";
     }
 
@@ -19,12 +19,12 @@ module.exports = validateLoginInput = data => {
     errors.password = "Password must have a minimum of 5 character!";
     }
 
-    if (validator.isEmpty(data.password)) {
+    if (validator.invalidResponse(data.password)) {
     errors.password = "Please enter a password!";
     }
 
     return {
     errors,
-    isValid: isEmpty(errors)
+    isValid: invalidResponse(errors)
 };
 }

@@ -1,4 +1,4 @@
-module.exports = isEmpty = value => {
+module.exports = invalidResponse = value => {
     return (
         value === undefined ||
         value === null ||
