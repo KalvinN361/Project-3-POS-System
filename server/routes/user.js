@@ -46,7 +46,7 @@ database
         });
     });
 });
-
+// get route to pull login data with auth using json web token. 
 router.get(
     "/loginData",
     passport.authenticate("jwt", { session: false }),
