@@ -1,4 +1,4 @@
-const { Tech } = require('../models');
+const { Tech } = require('../models/Item');
 
 module.exports = {
   async getAllTech(req, res) {
