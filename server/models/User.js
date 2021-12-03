@@ -1,6 +1,8 @@
 const { Schema, model} = require('mongoose');
 const bycrypt = require ('bcrypt');
 
+const orderSchema = require('./Order')
+
 const userSchema = new Schema({
     username: {
         type: String, 
@@ -24,7 +26,13 @@ const userSchema = new Schema({
         minlength: 6,
     },
 
-
+    // set savedOrder to be an array
+    savedOrder: [orderSchema],
+},
+{
+    toJSON: {
+        virtuals: true, 
+    },  
 });
 
 userSchema.pre('save', async function (next) {
@@ -38,6 +46,9 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
     return bycrypt.compare(password, this.password);
 };
+userSchema.virtual('orderCount').get(function () {
+    return this.savedOrder.length;
+});
 
 const User = model('User, userSchema')
 
