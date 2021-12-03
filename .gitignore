@@ -131,3 +131,8 @@ dist
 
 # App config
 config.js
+
+.vscode
+
+node_modules/
+
