@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose')
-const MenuItemSchema = require("./menuItem")
+const MenuItemSchema = require("./menuItems")
 
 
 const menucategorySchema = new Schema ({
@@ -17,4 +17,4 @@ const menucategorySchema = new Schema ({
     }
 });
 
-module.exports = MenuItemSchema;
+module.exports = menucategorySchema;

@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose')
-const menuSchema = require('../Menu')
+const menuSchema = require('../../Menu')
 const billSchema = require('./Bill')
 const tableSchema = require('./Table')
 
