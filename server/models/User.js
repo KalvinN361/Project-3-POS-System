@@ -18,22 +18,23 @@ const userSchema = new Schema({
         type: String, 
         required: true, 
         unique: true, 
+        trim: true,
         match: [/.+@.+\..+/, "Please enter a valid email address!!"],
     },
     password: {
         type: String, 
         require: true, 
         minlength: 6,
+        match: [/^[a-z0-9A-Z]+$/, "Password can only contain alphanumeric characters"],
     },
 
-    // set savedOrder to be an array
-    savedOrder: [orderSchema],
-},
-{
-    toJSON: {
-        virtuals: true, 
-    },  
-});
+    orders: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Order"
+        }
+    ]
+},);
 
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
@@ -46,9 +47,6 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
     return bycrypt.compare(password, this.password);
 };
-userSchema.virtual('orderCount').get(function () {
-    return this.savedOrder.length;
-});
 
 const User = model('User, userSchema')
 
