@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Order from './pages/Order';
-
+// update the routes path with page names
 function App() {
   return (
     <Router>
