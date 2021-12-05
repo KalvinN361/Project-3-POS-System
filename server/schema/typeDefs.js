@@ -7,7 +7,7 @@ const typeDefs = gql`
         price: Number
         photo: [Photo]
         category: [Category]
-        date: Date
+        description: String
     }
 
     type Photo {
@@ -25,6 +25,13 @@ const typeDefs = gql`
 
     type Order {
         _id: ID
+        name: String
+        description: String
+        totalPrice: Number
+        isPaid: Boolean
+        table: Number
+        dateAdded: Date
+
 
     }
     type Category {
@@ -39,5 +46,23 @@ const typeDefs = gql`
 
     type Query {
         user(_id: ID!) : User
+        
+
+
+
+
+
+
+    }
+
+    type Mutation {
+
+
+
+
+
+
+
+
     }
 `
