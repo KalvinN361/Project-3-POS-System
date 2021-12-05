@@ -45,24 +45,23 @@ const typeDefs = gql`
     }
 
     type Query {
-        user(_id: ID!) : User
-        
-
-
-
-
-
-
+        users: [User]
+        user(userId: ID!) : User
+        orders: [Order]
+        order(orderId: ID!): Order
+        items: [Item]
+        item(itemId: ID!): Item
     }
 
     type Mutation {
+        addUser(username: String!, email: String!, password: String!): User
+        addOrder(userId: ID!, name: String!, table: Number!): User
+        addItem(name: String!, price: Number!, description: String!): Item
 
-
-
-
-
-
-
-
+        removeUser(userId: ID!): User
+        removeOrder(userId: ID!, name: String, table: Number!): User
+        removeItem(itemId: ID!): Item
     }
 `
+
+module.exports = typeDefs;

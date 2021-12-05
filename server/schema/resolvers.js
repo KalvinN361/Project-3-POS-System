@@ -1,10 +1,13 @@
 const {
-        Items, Order, User
+    Items, Order, User
 } = require("../models");
+
 const mongoose = require('mongoose')
+
 const {
     signToken
 } = require('../utils/auth')
+
 const {
     AuthentificationError
 } = require('apollo-server-express');
@@ -21,8 +24,8 @@ const resolvers = {
             if (!user) {
                 throw new AuthentificationError('Please log in with a valid user')
             }
-            return user; 
-        },    
+            return user;
+        },
 
-}
+    }
 }
