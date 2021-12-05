@@ -1,10 +1,12 @@
 const { Schema } = require('mongoose');
 
 const orderSchema = new Schema ({
-    name: {
-        type: String,
-        required: true, 
-    },
+    orderItem: [{
+        name : {type: String, required: true}, 
+        quantity: {type: Number, required: true},
+        price: {type: Number, required: true},
+        img: { type: String }
+    }],
     description: {
         type: String, 
         required: true, 
@@ -15,6 +17,11 @@ const orderSchema = new Schema ({
     },
     image: {
         type: String,
+    },
+    totalPrice: {
+        type: Number, 
+        required: true, 
+        defaule: 0.0,
     }
 })
 

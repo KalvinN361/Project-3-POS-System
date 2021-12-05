@@ -16,11 +16,13 @@ const resolvers = {
             return await Items.find({})
         },
         user: async (parent, args, context) => {
-            const user = User.findOne(args.id).populate('order')
+            const user = await User.findOne(args.id).populate('order')
 
             if (!user) {
                 throw new AuthentificationError('Please log in with a valid user')
             }
             return user; 
         },    
+
+}
 }
