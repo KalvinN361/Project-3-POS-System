@@ -5,9 +5,11 @@ const typeDefs = gql`
         _id: ID
         name: String
         price: Int
-        photo: Photo
+        image: String
         category: Category
         description: String
+        dateCreated: String
+        createdBy: String
     }
 
     type Photo {

@@ -1,7 +1,7 @@
 {
   "name": "tech-matchup-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "using valdiator npm package for validation in login.",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -19,6 +19,15 @@
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
     "@mui/material": "^5.2.2",
+    "install": "^0.13.0",
     "validator": "^13.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KalvinN361/Project-3-POS-System.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KalvinN361/Project-3-POS-System/issues"
+  },
+  "homepage": "https://github.com/KalvinN361/Project-3-POS-System#readme"
 }

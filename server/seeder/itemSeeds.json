@@ -1,0 +1,12 @@
+[
+    {
+        "dateCreated":"Date.now()",
+        "name": "PhoTaco",
+        "price": "15",
+        "category": "Special",
+        "description": "Three tacos served with a bowl of pho!",
+        "dateCreateded": "String",
+        "image": "",
+        "createdBy": "Kalvin"
+    }
+]
