@@ -19,7 +19,7 @@ const orderSchema = new Schema ({
         defaule: 0.0,
     },
     isPaid: {
-        type: boolean, 
+        type: Boolean, 
         required: true, 
         defualt: false
     },

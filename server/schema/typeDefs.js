@@ -4,7 +4,7 @@ const typeDefs = gql`
     type Item {
         _id: ID
         name: String
-        price: Number
+        price: Int
         photo: Photo
         category: Category
         description: String
@@ -27,17 +27,17 @@ const typeDefs = gql`
         _id: ID
         name: String
         description: String
-        totalPrice: Number
+        totalPrice: Int
         isPaid: Boolean
-        table: Number
-        dateAdded: Date
+        table: Int
+        dateAdded: String
 
 
     }
     type Category {
         name: String
         item: [Item]
-        date: Date
+        date: String
     }
     type Auth {
         token: ID
@@ -56,11 +56,11 @@ const typeDefs = gql`
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
-        addOrder(userId: ID!, name: String!, table: Number!, totalPrice: Number!, description: String!): User
-        addItem(name: String!, price: Number!, description: String!, photoId: ID!, categoryId: ID!): Item
+        addOrder(userId: ID!, name: String!, table: Int!, totalPrice: Int!, description: String!): User
+        addItem(name: String!, price: Int!, description: String!, photoId: ID!, categoryId: ID!): Item
 
         removeUser(userId: ID!): User
-        removeOrder(userId: ID!, name: String, table: Number!): User
+        removeOrder(userId: ID!, name: String, table: Int!): User
         removeItem(itemId: ID!): Category
     }
 `
