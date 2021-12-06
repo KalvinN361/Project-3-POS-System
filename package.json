@@ -16,9 +16,17 @@
     "concurrently": "^5.3.0"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.2.1",
+    "stripe": "^8.191.0",
+=======
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
     "@mui/material": "^5.2.2",
+>>>>>>> 9a100eeead642415c60867abca61762bd065d5a1
     "validator": "^13.7.0"
   }
 }
