@@ -6,20 +6,20 @@ import Typography from '@mui/material/Typography';
 
 const images = [
   {
-    url: '/static/images/buttons/breakfast.jpg',
-    title: 'Taco',
-    width: '25%',
+    url: './images/navtaco.jpg',
+    title: 'Entrees',
+    width: '33%',
   },
   {
-    url: '/static/images/buttons/burgers.jpg',
-    title: 'Taco',
-    width: '25%',
+    url: './images/milktea.jpg',
+    title: 'Drinks',
+    width: '33%',
   },
   {
-    url: '/static/images/buttons/camera.jpg',
-    title: 'Taco',
-    width: '25%',
-  },
+    url: './images/churro.jpg',
+    title: 'Desserts',
+    width: '33%',
+  }
 ];
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
