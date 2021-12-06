@@ -1,5 +1,5 @@
 const {
-    Items, Order, User
+    Items, Orders, Users
 } = require("../models");
 
 const mongoose = require('mongoose')
@@ -15,17 +15,39 @@ const {
 // resolvers
 const resolvers = {
     Query: {
+        users: async () => {
+            return await Users.find({})
+        },
+        orders: async () => {
+            return await Orders.find({})
+        },
         items: async () => {
             return await Items.find({})
         },
         user: async (parent, args, context) => {
-            const user = await User.findOne(args.userId).populate('order')
+            const user = await Users.findOne(args.userId).populate('order')
 
             if (!user) {
                 throw new AuthentificationError('Please log in with a valid user')
             }
             return user;
         },
+        order: async (parent, args, context) => {
+            const order = await Orders.findOne(args.orderId)
+
+            if (!order) {
+                throw new AuthentificationError('Please use a valid order')
+            }
+            return order;
+        },
+        item: async (parent, args, context) => {
+            const item = await Items.findOne(args.itemId).populate('category').populate('photo')
+
+            if (!item) {
+                throw new AuthentificationError('Please use a valid item')
+            }
+            return item;
+        }
         
 
     },
