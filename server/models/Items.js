@@ -1,4 +1,5 @@
 const { Schema } = require('mongoose');
+
 const itemSchema = new Schema ({
     name: {
         type: String, 
@@ -24,4 +25,5 @@ const itemSchema = new Schema ({
         type: String, 
     }
 })
-module.export = itemSchema;
+
+module.export = itemSchema; 
