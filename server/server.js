@@ -1,9 +1,6 @@
 const express = require('express');
 const path = require('path');
 const db = require('./config/connection');
-const routes = require('./routes');
-const mongoose = require('mongoose');
-const DBconnect = require('./server/config/connection.js');
 const { ApolloServer } = require('apollo-server-express')
 const { typeDefs, resolvers } = require('./dumb')
 const { authMiddleware } = require("./utils/auth")
@@ -12,9 +9,8 @@ const { appendFile } = require('fs');
 // need models
 
 const app = express();
+const PORT = process.env.PORT || 3001;
 
-DBconnect();
-app.use(express.urlencoded({ extended: true }));
 const server = new ApolloServer({
   typeDefs, 
   resolvers, 
@@ -34,11 +30,6 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-const PORT = process.env.MONGODB_URI || 8000;
-app.use(routes);
-
-db.once('open', () => {
-  app.listen(PORT, () => console.log(`Now listening on localhost: ${PORT}`));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 })
