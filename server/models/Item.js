@@ -1,7 +1,10 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { Schema, model } = require('mongoose');
 
-const menuItems = new Schema({
+const itemSchema = new Schema({
+  category: {
+    type: String,
+    required: true,
+  },
   item: {
     type: String,
     required: true,
@@ -12,19 +15,8 @@ const menuItems = new Schema({
   },
   description: {
     type: String,
+    required: true,
   },
-  category: {
-    type: String,
-  },
-  images: {
-    name: String,
-    desc: String,
-    image:
-    {
-    data: Buffer,
-    contentType: String,
-    }
-  },
-});
+})
 
-// model.export = menuItems = mongoose.model('Menu', menuItems);
+model.export = menuItems = mongoose.model('Menu', menuItems);

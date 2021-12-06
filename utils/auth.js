@@ -1,9 +1,12 @@
 const jwt = require('jsonwebtoken');
-
-const secret = 'mysecretsshhhhh';
+const express = require('express');
+const router = express.Router();
+const secret = secret;
+const bcrypt = require('bcrypt');
+const auth = require('./auth');
 const expiration = '2h';
 
-
+const user = require('../server/models/user')
 import decode from 'jwt-decode';
 
 class AuthService {

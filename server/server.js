@@ -2,10 +2,12 @@ const express = require('express');
 const path = require('path');
 const db = require('./config/connection');
 const routes = require('./routes');
+const mongoose = require('mongoose');
+const DBconnect = require('./server/config/connection.js');
 
 const app = express();
-const PORT = process.env.MONGODB_URI || 3000;
 
+DBconnect();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -14,6 +16,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
+const PORT = process.env.MONGODB_URI || 8000;
 app.use(routes);
 
 db.once('open', () => {

@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.vscode
 
 # testing
 /coverage
@@ -131,8 +132,3 @@ dist
 
 # App config
 config.js
-
-.vscode
-
-node_modules/
-
