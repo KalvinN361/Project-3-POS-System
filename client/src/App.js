@@ -8,9 +8,25 @@ import Entrees from "./pages/Entrees";
 // import Sides from "./pages/Sides";
 import Desserts from "./pages/Desserts";
 import Drinks from "./pages/Drinks";
+import Auth from './utils/auth'
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+})
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
 
 const client = new ApolloClient({
-  uri: "/graphql",
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
@@ -38,6 +54,7 @@ function App() {
               <Drinks />
             </Route>
           </Switch>
+            {Auth.isLoggedIn() && <Navbar />}
         </div>
       </Router>
     </ApolloProvider>
