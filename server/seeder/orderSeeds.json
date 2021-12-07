@@ -1,0 +1,29 @@
+[
+    {
+        "dateCreated":"Date.now()",
+        "name": "Pastor",
+        "totalPrice": "10",
+        "isPaid": "True",
+        "description": "Three pork tacos",
+        "dateCreateded": "String",
+        "table": "101"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Pho",
+        "totalPrice": "12",
+        "isPaid": "false",
+        "description": "Meatball, brisket, well done flank",
+        "dateCreateded": "String",
+        "table": "101"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "PhoTaco",
+        "totalPrice": "15",
+        "isPaid": "false",
+        "description": "Three tacos served with a bowl of pho!",
+        "dateCreateded": "String",
+        "table": "101"
+    }
+]

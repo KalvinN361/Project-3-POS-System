@@ -1,0 +1,33 @@
+[
+    {
+        "dateCreated":"Date.now()",
+        "name": "PhoTaco",
+        "price": "15",
+        "category": "Special",
+        "description": "Three tacos served with a bowl of pho!",
+        "dateCreateded": "String",
+        "image": "",
+        "createdBy": "Kalvin"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Pastor",
+        "price": "10",
+        "category": "Taco",
+        "description": "Three pork tacos",
+        "dateCreateded": "String",
+        "image": "",
+        "createdBy": "Kalvin"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Beef Pho",
+        "price": "12",
+        "category": "Pho",
+        "description": "Meatball, brisket, well done flank",
+        "dateCreateded": "String",
+        "image": "",
+        "createdBy": "Kalvin"
+    }
+
+]
