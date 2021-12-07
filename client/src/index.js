@@ -23,4 +23,4 @@ ReactDOM.render(
 );
 
 
-reportWebVitals()
+reportWebVitals();
