@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
@@ -120,63 +120,3 @@ export default function ButtonBases() {
     </Box>
   );
 }
-// conditional rendering for cards
-function NavTabs({ currentPage, handlePageChange }) {
-  return (
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a
-          href="#Home"
-          onClick={() => handlePageChange('Sides')}
-          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Sides' ? 'nav-link active' : 'nav-link'}
-        >
-          Home
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#Tacos"
-          onClick={() => handlePageChange('Tacos')}
-          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Tacos' ? 'nav-link active' : 'nav-link'}
-        >
-          Tacos
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#Pho"
-          onClick={() => handlePageChange('Pho')}
-          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Pho' ? 'nav-link active' : 'nav-link'}
-        >
-          Pho
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#Drinks"
-          onClick={() => handlePageChange('Drinks')}
-          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Drinks' ? 'nav-link active' : 'nav-link'}
-        >
-          Drinks
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#Desserts"
-          onClick={() => handlePageChange('Desserts')}
-          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Desserts' ? 'nav-link active' : 'nav-link'}
-        >
-          Desserts
-        </a>
-      </li>
-    </ul>
-  );
-}
-
-export default NavTabs;

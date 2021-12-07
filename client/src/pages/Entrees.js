@@ -1,13 +1,13 @@
-import * as React from "react";
+import React from 'react';
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
-import taco1 from "./images/alpastor.jpg";
-import pho1 from "./images/pho.png";
-import pho2 from "./images/pho2.png";
+import taco1 from "../images/alpastor.jpg";
+import pho1 from "../images/pho.png";
+import pho2 from "../images/pho2.jpg";
 import Checkbox from "@mui/material/Checkbox";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";

@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 import Topbar from "./components/Topbar";
 import Navtabs from "./components/Navtabs";
 import Entrees from "./pages/Entrees";
-import Sides from "./pages/Sides";
+// import Sides from "./pages/Sides";
 import Desserts from "./pages/Desserts";
 import Drinks from "./pages/Drinks";
 
@@ -28,9 +28,9 @@ function App() {
             <Route exact path="/entrees">
               <Entrees />
             </Route>
-            <Route exact path="/sides">
+            {/* <Route exact path="/sides">
               <Sides />
-            </Route>
+            </Route> */}
             <Route exact path="/desserts">
               <Desserts />
             </Route>

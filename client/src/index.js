@@ -1,27 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { logger } from 'redux-logger'
-import thunk from 'redux-thunk'
-import reducers from './reducers';
-import App from './components/App';
-import * as serviceWorker from './serviceWorker'
+// import { createStore, applyMiddleware } from 'redux';
+// import { BrowserRouter as Router } from 'react-router-dom';
+// import { logger } from 'redux-logger'
+// import thunk from 'redux-thunk'
+import App from './App';
+import reportWebVitals from './reportWebVitals'
+// import index from './index.css'
 
-const store = createStore(
-	reducers,
-	applyMiddleware(thunk, logger)
-)
+// const store = createStore(
+// 	reducers,
+// 	applyMiddleware(thunk, logger)
+// )
 
 ReactDOM.render(
-	<Provider store={store}>
-		<Router>
+	// <Provider store={store}>
+		<React.StrictMode>
 			<App />
-		</Router>
-	</Provider>, 
+		</React.StrictMode>,
+	// </Provider>, 
 	document.getElementById('root')
 );
 
 
-serviceWorker.register();
+reportWebVitals()

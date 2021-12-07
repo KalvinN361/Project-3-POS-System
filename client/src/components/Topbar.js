@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from 'react';
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -81,15 +81,6 @@ export default function PersistentDrawerLeft() {
     setOpen(false);
   };
 
-const styles = {
-    bottomPush: {
-        position: "fixed",
-        bottom: 0,
-        textAlign: "center",
-        paddingBottom: 10,
-    }
-}
-
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -107,7 +98,7 @@ const styles = {
           <Typography variant="h6" noWrap component="div">
             PhoTaco
           </Typography>
-          <Button variant="contained" color="error">
+          <Button variant="contained" color="secondary">
             Logout
           </Button>
         </Toolbar>
@@ -146,11 +137,7 @@ const styles = {
     <DrawerContent sx={{ justifyContent: "space-between" }}>
     <Typography>Total</Typography>
     <Typography>Price</Typography>
-
     </DrawerContent>
-    <Divider/>
-    <Button variant="contained" size="large">Checkout
-        </Button>
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
