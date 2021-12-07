@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from 'react';
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -7,10 +7,10 @@ import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
-import ThaiTea from "./images/thaitea.jpg";
-import VietnameseCoffee from "./images/vietnamesecoffee.jpg";
-import BobaMilkTea from "./images/milktea.jpg";
-import AguaFresca from "./images/aguafresca.jpg";
+import ThaiTea from "../images/thaitea.jpg";
+import VietnameseCoffee from "../images/vietnamesecoffee.jpg";
+import BobaMilkTea from "../images/milktea.jpg";
+import AguaFresca from "../images/aguafresca.jpg";
 
 const Img = styled("img")({
   display: "block",
