@@ -12,14 +12,14 @@ const typeDefs = gql`
         createdBy: String
     }
 
-    type Photo {
+    type image {
         small: String 
         medium: String
     }
 
     type User {
         _id: ID
-        username: String
+        name: String
         email: String
         password: String
         order: [Order]
@@ -33,6 +33,7 @@ const typeDefs = gql`
         isPaid: Boolean
         table: Int
         dateCreated: String
+        createdBy: String
 
 
     }
@@ -59,7 +60,7 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
         addOrder(userId: ID!, name: String!, table: Int!, totalPrice: Int!, description: String!): User
-        addItem(name: String!, price: Int!, description: String!, photoId: ID!, categoryId: ID!): Item
+        addItem(name: String!, price: Int!, description: String!, imageId: ID!, categoryId: ID!): Item
 
         removeUser(userId: ID!): User
         removeOrder(userId: ID!, name: String, table: Int!): User

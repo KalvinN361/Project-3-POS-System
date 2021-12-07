@@ -1,33 +1,94 @@
 [
     {
         "dateCreated":"Date.now()",
-        "name": "PhoTaco",
-        "price": "15",
+        "name": "Pho Taco",
+        "price": "5.00",
         "category": "Special",
-        "description": "Three tacos served with a bowl of pho!",
-        "dateCreateded": "String",
+        "description": "Fusion taco with noodles and beef",
         "image": "",
         "createdBy": "Kalvin"
     },
     {
         "dateCreated":"Date.now()",
-        "name": "Pastor",
-        "price": "10",
+        "name": "Al Pastor",
+        "price": "3.50",
         "category": "Taco",
-        "description": "Three pork tacos",
-        "dateCreateded": "String",
+        "description": "Marinated pork with pineapple",
         "image": "",
         "createdBy": "Kalvin"
     },
     {
         "dateCreated":"Date.now()",
-        "name": "Beef Pho",
-        "price": "12",
+        "name": "Pho Tai",
+        "price": "8.00",
         "category": "Pho",
         "description": "Meatball, brisket, well done flank",
-        "dateCreateded": "String",
+        "image": "",
+        "createdBy": "Kalvin"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Whatataco",
+        "price": "5.50",
+        "category": "Taco",
+        "description": "Taco with ground beef, tomato, lettuce, and ketchup",
+        "image": "",
+        "createdBy": "Kalvin"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Pho Eye of Round",
+        "price": "9.00",
+        "category": "Pho",
+        "description": "Beef broth with eye round steak and fresh basil",
+        "image": "",
+        "createdBy": "Kalvin"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Pho Tai Chin",
+        "price": "10.00",
+        "category": "Pho",
+        "description": "Beef broth with eye round steak and fresh basil",
+        "image": "",
+        "createdBy": "Kalvin"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Thai Tea",
+        "price": "3.00",
+        "category": "Drink",
+        "description": "Bubble milk tea with tapioca",
+        "image": "",
+        "createdBy": "Kalvin"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Vietnamese Coffee",
+        "price": "3.00",
+        "category": "Drink",
+        "description": "Drip coffee with condensed milk",
+        "image": "",
+        "createdBy": "Kalvin"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Boba Milk Tea",
+        "price": "4.00",
+        "category": "Drink",
+        "description": "Bubble tea with your choice of toppings",
+        "image": "",
+        "createdBy": "Kalvin"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Aqua Fresca",
+        "price": "2.00",
+        "category": "Drink",
+        "description": "Fresh fruit juice",
         "image": "",
         "createdBy": "Kalvin"
     }
+
 
 ]

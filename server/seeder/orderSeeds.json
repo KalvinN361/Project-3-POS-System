@@ -1,29 +1,52 @@
 [
     {
         "dateCreated":"Date.now()",
-        "name": "Pastor",
-        "totalPrice": "10",
+        "name": "Al Pastor",
+        "totalPrice": "3.50",
         "isPaid": "True",
-        "description": "Three pork tacos",
+        "description": "Marinated pork with pineapple",
         "dateCreateded": "String",
-        "table": "101"
+        "table": "101",
+        "createdBy": "Jesse Alavrez"
     },
     {
         "dateCreated":"Date.now()",
-        "name": "Pho",
-        "totalPrice": "12",
+        "name": "Thai Tea",
+        "totalPrice": "3.00",
+        "isPaid": "false",
+        "description": "Bubble milk tea with tapioca",
+        "dateCreateded": "String",
+        "table": "101",
+        "createdBy": "Jesse Alvarez"
+    }
+    {
+        "dateCreated":"Date.now()",
+        "name": "Pho Tai",
+        "totalPrice": "8.00",
         "isPaid": "false",
         "description": "Meatball, brisket, well done flank",
         "dateCreateded": "String",
-        "table": "101"
+        "table": "102",
+        "createdBy": "Ron Sit"
     },
     {
         "dateCreated":"Date.now()",
-        "name": "PhoTaco",
-        "totalPrice": "15",
+        "name": "Pho Taco",
+        "totalPrice": "5.00",
         "isPaid": "false",
-        "description": "Three tacos served with a bowl of pho!",
+        "description": "Fusion taco with noodles and beef",
         "dateCreateded": "String",
-        "table": "101"
+        "table": "103",
+        "createdBy": "Emilio Estevez"
+    },
+    {
+        "dateCreated":"Date.now()",
+        "name": "Pho Taco",
+        "totalPrice": "5.00",
+        "isPaid": "false",
+        "description": "Fusion taco with noodles and beef",
+        "dateCreateded": "String",
+        "table": "104",
+        "createdBy": "Vincent Sullivan"
     }
 ]

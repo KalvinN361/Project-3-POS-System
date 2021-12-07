@@ -1,13 +1,37 @@
 [
     {
-        "username": "Jalvarez025",
-        "email": "jesse025@me.com",
-        "password": "Password123",
+        "name": "Jesse Alvarez",
+        "email": "jesse@me.com",
+        "password": "Password2021",
         "order": "Order"
     },
     {
-        "username": "Kalvin2021",
-        "email": "kal@me.com",
+        "name": "Kalvin Nguyen",
+        "email": "kalvin@me.com",
+        "password": "Password2021",
+        "order": "Order"
+    },
+    {
+        "name": "Emilio Estevez",
+        "email": "emilio@me.com",
+        "password": "Password2021",
+        "order": "Order"
+    },
+    {
+        "name": "Ron Sit",
+        "email": "Ron@me.com",
+        "password": "Password2021",
+        "order": "Order"
+    },
+    {
+        "name": "Ron Sit",
+        "email": "Ron@me.com",
+        "password": "Password2021",
+        "order": "Order"
+    },
+    {
+        "name": "Vincent Sullivan",
+        "email": "vincent@me.com",
         "password": "Password2021",
         "order": "Order"
     }
