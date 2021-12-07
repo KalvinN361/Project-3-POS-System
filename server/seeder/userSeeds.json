@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Jesse Alvarez",
+        "email": "jesse@me.com",
+        "password": "Password2021",
+        "order": "Order"
+    },
+    {
+        "name": "Kalvin Nguyen",
+        "email": "kalvin@me.com",
+        "password": "Password2021",
+        "order": "Order"
+    },
+    {
+        "name": "Emilio Estevez",
+        "email": "emilio@me.com",
+        "password": "Password2021",
+        "order": "Order"
+    },
+    {
+        "name": "Ron Sit",
+        "email": "Ron@me.com",
+        "password": "Password2021",
+        "order": "Order"
+    },
+    {
+        "name": "Ron Sit",
+        "email": "Ron@me.com",
+        "password": "Password2021",
+        "order": "Order"
+    },
+    {
+        "name": "Vincent Sullivan",
+        "email": "vincent@me.com",
+        "password": "Password2021",
+        "order": "Order"
+    }
+]
