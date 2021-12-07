@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from "@apollo/client";
 import Login from "./pages/Login";
 import Topbar from "./components/Topbar";
 import Navtabs from "./components/Navtabs";
@@ -9,6 +9,7 @@ import Entrees from "./pages/Entrees";
 import Desserts from "./pages/Desserts";
 import Drinks from "./pages/Drinks";
 import Auth from './utils/auth'
+import { setContext } from '@apollo/client/link/context';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -54,7 +55,7 @@ function App() {
               <Drinks />
             </Route>
           </Switch>
-            {Auth.isLoggedIn() && <Navbar />}
+            {Auth.isLoggedIn() && <Navtabs />}
         </div>
       </Router>
     </ApolloProvider>
