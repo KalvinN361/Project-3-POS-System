@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/POS-System', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1/POS-System', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
